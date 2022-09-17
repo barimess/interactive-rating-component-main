@@ -28,7 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     /* put back once you finish with small window */
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 .rating-wrapper {
@@ -49,6 +49,7 @@ body {
     align-items: center;
 }
 
+/* TODO: should I delete this ? useless so far  */
 .star-image {
 }
 
@@ -110,6 +111,8 @@ body {
     color: var(--Orange);
 }
 
+
+/* TODO: start thank you wrapper and finish styling */
 .thankyou-wrapper {
     display: none;
 }
