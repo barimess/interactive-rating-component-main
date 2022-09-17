@@ -7,5 +7,5 @@ function select(obj) {
    wiper = document.getElementById(`number-${i}`);
    wiper.classList.remove("selected");
  }
- obj.classList.add("selected")
+ obj.classList.add("selected");
 }
