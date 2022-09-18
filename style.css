@@ -27,11 +27,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* put back once you finish with small window */
     height: 100vh;
 }
 
 .rating-wrapper {
+    display: block;
     background-color: var(--Very-Dark-Blue);
     background: radial-gradient(circle at top, rgba(37,45,55,1) 20%, rgba(18,20,23,1) 100%);    width: 400px;
     height: 400px;
@@ -49,10 +49,6 @@ body {
     align-items: center;
 }
 
-/* TODO: should I delete this ? useless so far  */
-.star-image {
-}
-
 .rating-title {
     color: var(--white);
 }
@@ -65,6 +61,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin: 32px 0;
+    padding: 0;
 }
 
 .number {
@@ -114,14 +111,130 @@ body {
 
 /* TODO: start thank you wrapper and finish styling */
 .thankyou-wrapper {
+    background-color: var(--Very-Dark-Blue);
+    background: radial-gradient(circle at top, rgba(37,45,55,1) 20%, rgba(18,20,23,1) 100%);    width: 400px;
+    height: 400px;
+    border-radius: 28px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.thankyou-image {
+    /*width according to svg*/
+    width: 162px;
+    margin: 12px auto;
+}
+
+.thankyou-selected-rating {
+    color: var(--Orange);
+    background: var(--Dark-Blue);
+    text-align: center;
+    margin: 32px 64px;
+    padding: 4px;
+    border-radius: 30px;
+}
+
+.thankyou-title {
+    color: var(--white);
+    text-align: center;
+    margin: 0;
+}
+
+.thankyou-description {
+    color: var(--Medium-Grey);
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5rem;
+    padding: 4px;
+}
+
+/* hiding and showing items with Js */
+.hidden {
     display: none;
 }
 
+.visuallyhidden {
+    opacity: 0;
+}
+
+/* footer styling */
 .attribution {
     background-color: var(--Dark-Blue);
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 8px;
     text-align: center;
 }
+
+/* animations */
+.animate-out {
+	animation-name: fadeOutUp;
+    animation-duration: 1.8s;
+}
+
+  .animate-in {
+	animation-name: bounceIn;
+    animation-duration: 1s;
+}
+
+/* animation fadeOutUp */
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+/* animation bounceIn */
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    20% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9);
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: scale3d(1.03, 1.03, 1.03);
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      -webkit-transform: scale3d(0.97, 0.97, 0.97);
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+}
+

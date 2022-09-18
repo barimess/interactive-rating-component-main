@@ -22,7 +22,7 @@
 
   <main>
   <!-- Rating state start -->
-  <section class="rating-wrapper"> 
+  <section id="rating-section" class="rating-wrapper"> 
 
     <div class="rating-star"><img src="images/icon-star.svg" alt="star image" class="star-image"></div>
     
@@ -41,17 +41,17 @@
       <div id="number-5" class="number" onclick="select(this)">5</div>
     </div>
 
-    <button class="ab-submit">
+    <button class="ab-submit" onclick="submitRating()">
       Submit
     </button>
+    <!-- Rating state end -->
   </section>
 
-  <section class="thankyou-wrapper">
-    <!-- Rating state end -->
-    <img src="" alt="phone picture">
+  <section id="thankyou-section" class="thankyou-wrapper visuallyhidden hidden">
+    <img src="images/illustration-thank-you.svg" class="thankyou-image" alt="phone picture">
     <!-- Thank you state start -->
     <div class="thankyou-selected-rating">
-      You selected <!-- Add rating here --> out of 5
+      You selected <span id="rating-value">0</span><!-- rating here --> out of 5
     </div>
     <h1 class="thankyou-title">
       Thank you!
