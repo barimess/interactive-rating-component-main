@@ -9,7 +9,13 @@ function select(obj) {
    wiper = document.getElementById(`number-${i}`);
    wiper.classList.remove("selected");
  }
+
+ let selecter;
+ for(let i=1; i<rating_state; i++) {
+  selecter = document.getElementById(`number-${i}`);
+  selecter.classList.add("selected");
  obj.classList.add("selected");
+}
 }
 
 //function to submit the rating to the thank you form.
