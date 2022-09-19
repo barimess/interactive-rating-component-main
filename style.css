@@ -166,8 +166,11 @@ body {
     left: 0;
     right: 0;
     padding: 8px;
+    font-size: 16px;
     text-align: center;
 }
+
+.attribution a { color: hsl(228, 45%, 44%); }
 
 /* animations */
 .animate-out {
