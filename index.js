@@ -40,8 +40,9 @@ function fadeOut(obj) {
 }
 
 function fadeIn(obj, obj2) {
-  
 
+  //wait for the first object to finish animating then play the second one.
+  //note this can be mixed with "fadOut" function into a "swap" function but this is more clear.
   obj2.addEventListener('animationend', function(e) {
     obj.classList.remove("hidden");
     obj.classList.add("animate-in");
