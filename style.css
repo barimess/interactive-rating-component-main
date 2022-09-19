@@ -175,7 +175,7 @@ body {
 /* animations */
 .animate-out {
 	animation-name: fadeOutUp;
-    animation-duration: 1.8s;
+    animation-duration: 0.9s;
 }
 
   .animate-in {
